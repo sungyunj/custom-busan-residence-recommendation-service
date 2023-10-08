@@ -1,1 +1,1 @@
-# custom-busan-residence-recommendation-service
+# 맞춤형 부산 거주지 추천 시스템 프로젝트
