@@ -1,4 +1,4 @@
-# 스타벅스 데이터 운용 예제코드
+# 스타벅스 데이터 운용 예제 코드
 
 import pandas as pd
 import requests
@@ -6,7 +6,7 @@ import requests
 gu=pd.read_html('https://inasie.github.io/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/5/',encoding='utf-8')[0]
 seoul=gu[gu['법정동주소'].str.contains('서울')][1:]
 
-api="NEED API_KEY"
+api="efc1b26d609b687398664b4f30490c20"
 
 starbucks=[]
 for q in seoul['법정동주소']:
@@ -41,5 +41,3 @@ bucks=pd.concat([sb,sbr],axis=0)
 bucks=bucks.drop_duplicates(['address_name'],keep='last')
 print(bucks)
 bucks.to_csv('starbucks.csv', index=False)
-
-
